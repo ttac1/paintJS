@@ -77,7 +77,7 @@ function handleCanvasClick(){
 
 function handleCM(event) { 
     event.preventDefault();
-  }
+  }//우클릭 금지
 
 function handleSaveClick() { 
     const image = canvas.toDataURL();
@@ -93,7 +93,7 @@ if(canvas) {
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
     canvas.addEventListener("click", handleCanvasClick);
-    canvas.addEventListener("contextmenu", handleCM);
+    canvas.addEventListener("contextmenu", handleCM);//우클릭 금지
  } 
  
  Array.from(colors).forEach(color => color.addEventListener("click",handleColorClick));
